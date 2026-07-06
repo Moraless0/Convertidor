@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "convertidor-bblx"
+version = "0.1.0"
+description = "Conversor de módulos MyBible SQLite a e-Sword BBLX"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [{name = "Henry Morales"}]
+
+[project.scripts]
+convertidor-bblx = "converter.cli:main"
+
+[tool.setuptools]
+packages = ["converter"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
